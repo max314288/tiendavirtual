@@ -1,0 +1,63 @@
+import type { Promotion } from "./engine";
+
+// Demo promotions for API_MODE=mock (shared by the 4 demo stores).
+// Codes to try: BIENVENIDA10, AUDIO15, ENVIOGRATIS (VERANO25 is expired).
+
+export const mockPromotions: Promotion[] = [
+  {
+    id: "promo-bienvenida",
+    code: "BIENVENIDA10",
+    label: "10% de bienvenida",
+    type: "percentage",
+    value: 10,
+    appliesTo: "order",
+    categoryPaths: [],
+    minSubtotal: null,
+    maxDiscount: "50.00",
+    startsAt: "2026-01-01T05:00:00Z",
+    endsAt: null,
+    usageLimitPerCustomer: 1,
+  },
+  {
+    id: "promo-audio",
+    code: "AUDIO15",
+    label: "15% en audio",
+    type: "percentage",
+    value: 15,
+    appliesTo: "categories",
+    categoryPaths: ["tecnologia.audio"],
+    minSubtotal: "300.00",
+    maxDiscount: null,
+    startsAt: "2026-01-01T05:00:00Z",
+    endsAt: null,
+    usageLimitPerCustomer: null,
+  },
+  {
+    id: "promo-envio",
+    code: "ENVIOGRATIS",
+    label: "Envío gratis",
+    type: "free_shipping",
+    value: 0,
+    appliesTo: "order",
+    categoryPaths: [],
+    minSubtotal: "99.00",
+    maxDiscount: null,
+    startsAt: "2026-01-01T05:00:00Z",
+    endsAt: null,
+    usageLimitPerCustomer: null,
+  },
+  {
+    id: "promo-verano",
+    code: "VERANO25",
+    label: "25% de verano",
+    type: "percentage",
+    value: 25,
+    appliesTo: "order",
+    categoryPaths: [],
+    minSubtotal: null,
+    maxDiscount: null,
+    startsAt: "2026-01-01T05:00:00Z",
+    endsAt: "2026-03-31T05:00:00Z",
+    usageLimitPerCustomer: null,
+  },
+];
