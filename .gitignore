@@ -41,3 +41,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .data/
+
+#claude
+/.claude/
+/AGENTS.md
+/CLAUDE.md
+
+#docs
+/docs/
